@@ -1,5 +1,9 @@
-import { Component, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
+import { Location } from '@angular/common';
+
 import { Hero } from './hero';
+import { HeroService } from './hero.service';
 
 @Component({
   selector: 'my-hero-detail',
@@ -14,10 +18,28 @@ import { Hero } from './hero';
         />
       </div>
     </div>
+    <button (click)="goBack()">Back</button>
   `
 })
 
-export class HeroDetailComponent {
-  @Input()
+export class HeroDetailComponent implements OnInit {
   hero: Hero;
+
+  constructor(
+    private heroService: HeroService,
+    private route: ActivatedRoute,
+    private location: Location
+  ) { };
+
+  ngOnInit(): void {
+    this.route.params.forEach((params: Params) => {
+      let id = +params['id']; // implicit type conversion to Number
+      this.heroService.getHero(id)
+      .then(hero => this.hero = hero);
+    });
+  };
+
+  goBack(): void {
+    this.location.back();
+  };
 }
