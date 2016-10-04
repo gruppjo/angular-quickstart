@@ -1,3 +1,4 @@
+import './rxjs-extensions';
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -14,6 +15,7 @@ import { DashboardComponent } from './dashboard.component';
 import { HeroService } from './hero.service';
 import { HeroesComponent } from './heroes.component';
 import { HeroDetailComponent } from './hero-detail.component';
+import { HeroSearchComponent } from './hero-search.component';
 
 @NgModule({
   imports: [
@@ -27,7 +29,8 @@ import { HeroDetailComponent } from './hero-detail.component';
     AppComponent,
     DashboardComponent,
     HeroesComponent,
-    HeroDetailComponent
+    HeroDetailComponent,
+    HeroSearchComponent
   ],
   providers: [
     HeroService
