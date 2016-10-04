@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeroDetailComponent } from './hero-detail.component';
+import { HeroesComponent } from './heroes.component';
+import { HeroService } from './hero.service';
 
 @NgModule({
   imports: [
@@ -13,7 +15,11 @@ import { HeroDetailComponent } from './hero-detail.component';
   ],
   declarations: [
     AppComponent,
+    HeroesComponent,
     HeroDetailComponent
+  ],
+  providers: [
+    HeroService
   ],
   bootstrap: [
     AppComponent
