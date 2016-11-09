@@ -5,13 +5,14 @@
     "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
     "lite": "lite-server",
     "tsc": "tsc",
-    "tsc:w": "tsc -w"
+    "tsc:w": "tsc -w",
+    "aot": "ngc -p tsconfig-aot.json"
   },
   "license": "ISC",
   "dependencies": {
     "@angular/common": "~2.1.2",
     "@angular/compiler": "~2.1.2",
-    "@angular/compiler-cli": "^2.1.2",
+    "@angular/compiler-cli": "~2.1.2",
     "@angular/core": "~2.1.2",
     "@angular/forms": "~2.1.2",
     "@angular/http": "~2.1.2",
