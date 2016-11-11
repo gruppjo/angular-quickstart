@@ -7,7 +7,7 @@
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "aot": "ngc -p tsconfig-aot.json",
-    "build": "tsc && gulp build",
+    "build": "tsc --module es6 && gulp build",
     "watch.build": "lite-server -c my-bs-config.json"
   },
   "license": "ISC",

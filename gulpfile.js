@@ -6,6 +6,7 @@ var builderConf = {
   minify: true,
   mangle: true,
   runtime: false,
+  rollup: true,
   globalDefs: {
       DEBUG: false,
       ENV: 'production'
@@ -27,7 +28,8 @@ gulp.task('build', ['static'], function buildSJS (done) {
         'www/bundle.js',
         builderConf);
   })
-  .then(function() {
+  .then(function(output) {
+    console.log(output.inlineMap);
     console.log('Build complete');
     done();
   })
