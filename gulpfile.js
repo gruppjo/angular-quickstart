@@ -1,5 +1,4 @@
 var gulp = require('gulp');
-var runSequence = require('run-sequence');
 var Builder = require('systemjs-builder');
 
 var builderConf = {
