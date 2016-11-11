@@ -3,5 +3,7 @@ typings
 app/*.js
 app/*.js.map
 aot/
+www/*
+!www/index.html
 
 yarn.lock

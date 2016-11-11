@@ -6,7 +6,9 @@
     "lite": "lite-server",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
-    "aot": "ngc -p tsconfig-aot.json"
+    "aot": "ngc -p tsconfig-aot.json",
+    "build": "tsc && gulp build",
+    "watch.build": "lite-server -c my-bs-config.json"
   },
   "license": "ISC",
   "dependencies": {
@@ -24,17 +26,19 @@
     "angular-in-memory-web-api": "0.1.13",
     "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
+    "gulp": "^3.9.1",
     "reflect-metadata": "^0.1.8",
     "rxjs": "5.0.0-beta.12",
     "systemjs": "0.19.39",
+    "systemjs-builder": "^0.15.34",
     "zone.js": "^0.6.25"
   },
   "devDependencies": {
+    "@types/core-js": "^0.9.34",
+    "@types/jasmine": "^2.5.35",
+    "@types/node": "^6.0.45",
     "concurrently": "^3.0.0",
     "lite-server": "^2.2.2",
-    "typescript": "^2.0.3",
-    "@types/core-js": "^0.9.34",
-    "@types/node": "^6.0.45",
-    "@types/jasmine": "^2.5.35"
+    "typescript": "^2.0.3"
   }
 }
